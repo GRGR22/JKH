@@ -1,0 +1,41 @@
+html {
+  font-size: 12px;
+}
+.wrapper {
+  max-width: 100%;
+  padding: 10px;
+  margin: 0;
+}
+.menu-block {
+  width: fit-content;
+  min-width: fit-content;
+}
+.menu-block__logo {
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  background: url(../assets/Logo_mini.png) no-repeat;
+  background-position: 3px center;
+  background-size: contain;
+}
+.menu-block__nav {
+  margin-top: 27px;
+}
+.menu-block__nav li a span {
+  display: none;
+}
+.marked::after {
+  display: none;
+}
+.data-block {
+  width: 100%;
+}
+.data-block__head {
+  padding: 7px;
+}
+.data-block__head span {
+  display: none;
+}
+.data-block__dashbord__inner > div {
+  width: 80%;
+}

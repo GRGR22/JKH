@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="js/account_info.js"></script>
+  <link rel="stylesheet" media="screen and (max-width: 968px)" href="styles/mobile.css">
+  <script src="https://www.google.com/jsapi"></script>
+  <title>ЖСЭ</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <section class="menu-block">
+      <div class="menu-block__logo"></div>
+      <nav class="menu-block__nav">
+        <ul>
+          <li><a href="#"><img src="./assets/menu-home.png" alt=""><span>Главная</span></a></li>
+          <li class="marked"><a href="#"><img src="./assets/menu-message.png" alt=""><span>Уведомления</span></a></li>
+          <li><a href="#"><img src="./assets/menu-request.png" alt=""><span>Подать заявку</span></a></li>
+          <li><a href="#"><img src="./assets/menu-question.png" alt=""><span>Задать вопрос</span></a></li>
+          <li><a href="#"><img src="./assets/menu-receipt.png" alt=""><span>Квитанции</span></a></li>
+          <li><a href="#"><img src="./assets/menu-meter.png" alt=""><span>Счетчики</span></a></li>
+          <li><a href="#"><img src="./assets/menu-payment.png" alt=""><span>Оплата</span></a></li>
+        </ul>
+      </nav>
+    </section>
+    <section class="data-block">
+      <div class="data-block__head">
+        <a href="tel: +78482700800" title="Аварийная служба: 8 (8482) 700-800"><span>Аварийная служба: 8 (8482)
+            700-800</span></a>
+        <select name="adresses" id="adressesSelect"></select>
+      </div>
+      <div class="data-block__notice">
+        <h2>Уведомления</h2>
+        <div class="data-block__notice__cards">
+          <div class="data-block__notice__cards_card">
+            <img src="assets/pen.png" alt="pen image">
+            <p>Отправить показания счетчиков</p>
+          </div>
+          <div class="data-block__notice__cards_card">
+            <img src="assets/ruble.png" alt="ruble image">
+            <p>Оплатить квитанцию за июнь</p>
+          </div>
+          <div class="data-block__notice__cards_card" style="opacity: 0.7;">
+            <img src="assets/notification.png" alt="ruble image">
+            <p>Отключение горячей воды 20 августа</p>
+          </div>
+        </div>
+      </div>
+      <div class="data-block__dashbord">
+        <h2>Дашборд</h2>
+        <div class="data-block__dashbord__inner">
+          <div class="data-block__dashbord__inner_electricity">
+            <img src="assets/db-flash.png" alt="flash image">
+            <h3>Электричество <span>15.08.2021</span></h3>
+            <div class="data-block__dashbord__inner_electricity__readings">
+              <div class="data-block__dashbord__inner_electricity__readings_day">
+                <b>065<span>кВт/ч</span></b>
+                <p>День</p>
+                <p>Предыдущее: <span>21750</span></p>
+                <p>Текущее: <span>21815</span></p>
+              </div>
+              <div class="data-block__dashbord__inner_electricity__readings_night">
+                <b>012<span>кВт/ч</span></b>
+                <p>Ночь</p>
+                <p>Предыдущее: <span>21820</span></p>
+                <p>Текущее: <span>21832</span></p>
+              </div>
+            </div>
+            <div class="data-block__dashbord__inner_electricity__chart" id="electricity__chart"
+              style="width: 90%; height:150px; margin-top: 10%;">
+            </div>
+          </div>
+          <div class="data-block__dashbord__inner_water">
+            <img src="assets/db-drip.png" alt="flash image">
+            <h3>Вода<span>15.08.2021</span></h3>
+            <div class="data-block__dashbord__inner_water__readings">
+              <div class="data-block__dashbord__inner_water__readings_cold">
+                <b>065<span>м<sup><small>3</small></sup></span></b>
+                <p>Холодная</p>
+                <p>Предыдущее: <span>519</span></p>
+                <p>Текущее: <span>528</span></p>
+              </div>
+              <div class="data-block__dashbord__inner_water__readings_hot">
+                <b>012<span>м<sup><small>3</small></sup></span></b>
+                <p>Горячая</p>
+                <p>Предыдущее: <span>105</span></p>
+                <p>Текущее: <span>111</span></p>
+              </div>
+            </div>
+            <div class="data-block__dashbord__inner_water__chart" id="water__chart"
+              style="width: 90%; height:150px; margin-top: 10%;">
+            </div>
+          </div>
+          <div class="data-block__dashbord__inner_receipts">
+            <h3>Квитанции<span></span></h3>
+            <div class="data-block__dashbord__inner_receipts__inner">
+              <div class="data-block__dashbord__inner_receipts__inner__files">
+                <div>
+                  <div><img src="assets/receipt.png" alt=""></div>
+                  <p>15.13.1999</p>
+                </div>
+                <div>
+                  <div><img src="assets/receipt.png" alt=""></div>
+                  <p>15.14.1999</p>
+                </div>
+                <div>
+                  <div><img src="assets/receipt.png" alt=""></div>
+                  <p>15.15.1999</p>
+                </div>
+              </div>
+              <div class="data-block__dashbord__inner_receipts__inner__archive">
+                <button></button>
+                <p>Архив</p>
+              </div>
+            </div>
+          </div>
+          <div class="data-block__dashbord__inner_payment">
+            <h3>Оплата <span>без комиссии</span></h3>
+            <form action="#">
+              <div class="data-block__dashbord__inner_payment_digits">
+                <input type="number" size="8" step="0.01">
+                <p>Оплатить ЖКУ до 25 июля</p>
+              </div>
+              <div class="data-block__dashbord__inner_payment_submit">
+                <div>
+                  <img src="assets/visa-logo.png" alt="visa logo">
+                  <img src="assets/mastercard-logo.png" alt="visa logo">
+                  <img src="assets/mir-logo.png" alt="visa logo">
+                </div>
+                <input type="submit" value="Оплатить">
+              </div>
+            </form>
+          </div>
+          <div class="data-block__dashbord__inner_bids">
+            <h3>Заявки</h3>
+            <p>Упс...<br>У вас пока нет ни одной заявки</p>
+            <div>
+              <p>Добавить заявку</p>
+              <button></button>
+            </div>
+          </div>
+          <div class="data-block__dashbord__inner_askAQuestions">
+            <h3>Задать вопрос</h3>
+            <p>Упс...<br>Вы еще не задавали вопросов</p>
+            <div>
+              <p>Задать вопрос</p>
+              <button></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
